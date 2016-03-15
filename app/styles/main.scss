@@ -3,12 +3,7 @@ $fa-font-path: "../bower_components/components-font-awesome/fonts";
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/components-font-awesome/scss/font-awesome.scss";
-@import
-  "bower_components/animatewithsass/_properties",
-  "bower_components/animatewithsass/_attention-seekers/attention-seekers.scss",
-  "bower_components/animatewithsass/_bouncing-entrances/bouncing-entrances.scss",
-  "bower_components/animatewithsass/_sliding-entrances/sliding-entrances.scss";
-
+@import "bower_components/animatewithsass/animate.scss";
 // endbower
 
 // Vars
