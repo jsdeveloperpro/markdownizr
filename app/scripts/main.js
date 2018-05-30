@@ -1,9 +1,22 @@
 console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 jQuery.easing.def = "easeOutElastic";
 
+// helper to check if elem is visible on screen
+function isSeen(elem) {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
+
+  return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+
 $(document).ready(function() {
 
-// live markdownizing demo
+  // live markdownizing demo
+
   // set filtering opts
   var mdOpts = {
     // filter out stuff
@@ -26,7 +39,9 @@ $(document).ready(function() {
     $('#toMarkdown_output').val(toMarkdown($(this).val()));
   });
 
-// surpise demo unicorn
+
+  // surpise demo unicorn
+
   // set a unicorn counter
   var unicount = 0;
   // create a function for the animation
@@ -41,7 +56,7 @@ $(document).ready(function() {
       }, 5000, 'swing' )
   }
 
-// nice nav scrolling
+  // nice nav scrolling
   $('.navbar.navbar-default a').on('click', function(e) {
     var link = $(this).attr('href');
     // check if it's a local anchor
@@ -59,11 +74,11 @@ $(document).ready(function() {
   });
 
 
-// watch the user as they scroll... O.o
+  // watch the user as they scroll... O.o
   $(window).scroll(function() {
 
     // make sure unicorn hasn't been spotted yet
-    if ($('#demo').visible(true)) {
+    if (isSeen($('#demo h1'))) {
       // check if demo section is visible
       if (unicount === 0) {
         // hold a sec and start the show
@@ -74,10 +89,10 @@ $(document).ready(function() {
     }
 
     // only show the navbar brand when intro logo is out of sight
-    if (!$('#logo').visible(true)) {
-      $('#brand').addClass('needed');
+    if (!isSeen($('#logo'))) {
+      $('#brand').fadeIn().css("display","inline-block");
     } else {
-      $('#brand').removeClass('needed');
+      $('#brand').fadeOut();
     }
 
   });
