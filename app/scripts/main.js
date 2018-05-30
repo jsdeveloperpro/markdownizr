@@ -4,10 +4,24 @@ jQuery.easing.def = "easeOutElastic";
 $(document).ready(function() {
 
 // live markdownizing demo
+  // set filtering opts
+  var mdOpts = {
+    // filter out stuff
+    converters: [{
+      // grab the settings
+      filter: ['div', 'span', 'small', 'aside', 'section', 'article', 'header', 'time', 'address'],
+      replacement: function (innerHTML) { return innerHTML }
+    }, {
+      // don't include these in the final markdown
+      filter: ['script', 'noscript', 'canvas', 'embed', 'object', 'param', 'svg', 'source', 'form', 'nav', 'iframe', 'footer', 'hgroup'],
+      replacement: function () { return '' }
+    }]
+  };
+
   // start with default html converted to md
-  var mdOut = toMarkdown($('#toMarkdown_input').val());
+  var mdOut = toMarkdown($('#toMarkdown_input').val(), mdOpts);
   $('#toMarkdown_output').val(mdOut);
-  // watch the user. if they make any true moves, update the MD damnit!
+  // watch the user. if they make a move, update the MD damnit!
   $('#toMarkdown_input').bind('change paste keyup', function() {
     $('#toMarkdown_output').val(toMarkdown($(this).val()));
   });
