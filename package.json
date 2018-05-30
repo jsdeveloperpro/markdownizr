@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "deploy": "git subtree push --prefix dist origin gh-pages"
+  },
   "private": true,
   "engines": {
     "node": ">=4"
