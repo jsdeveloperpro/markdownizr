@@ -226,6 +226,10 @@ section.main {
   padding: 5em 0;
   border-width: 2em;
   border-top-style: dashed;
+
+  img {
+    margin-bottom: 3em;
+  }
 }
 #features .container-fluid.first-feature:first-child {
   border-top-color: $main-bg;
