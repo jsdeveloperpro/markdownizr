@@ -1,5 +1,5 @@
 console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
-jQuery.easing.def = "easeOutElastic";
+jQuery.easing.def = 'easeOutElastic';
 
 // helper to check if elem is visible on screen
 function isSeen(elem) {
@@ -48,11 +48,11 @@ $(document).ready(function() {
   function animateSecret() {
     $('#secret')
       .animate({
-          top: "30%",
-          right: "40%"
+          top: '30%',
+          right: '40%'
       }, 3000, 'swing' ).animate({
-          top: "-100%",
-          right: "-100%"
+          top: '-100%',
+          right: '-100%'
       }, 5000, 'swing' )
   }
 
@@ -90,7 +90,7 @@ $(document).ready(function() {
 
     // only show the navbar brand when intro logo is out of sight
     if (!isSeen($('#logo'))) {
-      $('#brand').fadeIn().css("display","inline-block");
+      $('#brand').fadeIn().css('display','inline-block');
     } else {
       $('#brand').fadeOut();
     }
