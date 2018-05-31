@@ -120,14 +120,24 @@ h1, h2, h3, h4 {
   );
 }
 
-#logo:hover i {
+#logo i {
   @include tada(
     $duration: 1s,
     $count: 1,
-    $delay: .1s,
+    $delay: 3s,
     $function: ease,
     $fill: both
   );
+
+  &:hover {
+    @include tada(
+      $duration: 1s,
+      $count: 1,
+      $delay: .1s,
+      $function: ease,
+      $fill: both
+    );
+  }
 }
 
 #logo i.fa-code {
@@ -184,6 +194,10 @@ h1, h2, h3, h4 {
 section.main {
   margin: 9em auto;
   text-align: center;
+}
+
+.container-fluid .row {
+  max-width: 1200px;
 }
 
 .feature-icon i {
