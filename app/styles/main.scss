@@ -279,6 +279,13 @@ section.main {
   font-family: 'Orbitron';
 }
 
+#credits {
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
 // for larger screens
 @media(min-width:48em){
   .feature-description {
