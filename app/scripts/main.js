@@ -91,7 +91,8 @@ $(document).ready(function() {
     // only show the navbar brand when intro logo is out of sight
     if (!isSeen($('#logo'))) {
       $('#brand').fadeIn().css('display','inline-block');
-    } else {
+    } else if (window.innerWidth > 767) {
+      // fade logo out on large screens
       $('#brand').fadeOut();
     }
 

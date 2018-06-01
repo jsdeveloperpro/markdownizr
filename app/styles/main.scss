@@ -109,7 +109,7 @@ h1, h2, h3, h4 {
 
 #logo {
   position: relative;
-  display: inline;
+  display: none;
 
   @include bounceInDown(
     $duration: 1s,
@@ -162,7 +162,6 @@ h1, h2, h3, h4 {
   display: inline-block;
   margin-top: 15px;
   margin-left: .5em;
-  display: none;
 }
 
 #brand i {
@@ -304,6 +303,13 @@ section.main {
 
 // for larger screens
 @media(min-width:48em){
+  #brand {
+    display: none;
+    font-size: 1em;
+  }
+  #logo {
+    display: inline;
+  }
   .feature-description {
     text-align: left;
   }
@@ -321,9 +327,6 @@ section.main {
   }
   h1 {
     font-size: 4em;
-  }
-  #brand {
-    font-size: 1em;
   }
   .brand-container {
     position: absolute;
