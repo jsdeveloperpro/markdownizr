@@ -40,14 +40,20 @@ body {
   font-size: 1.7em;
 }
 
-a:link {
-  color: white;
-  text-decoration: underline;
-  font-weight: bold;
-}
+a {
+  &:link {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  &:visited {
+    color: white;
+  }
 
-a:visited {
-  color: white;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 img {
@@ -299,6 +305,12 @@ section.main {
     list-style: none;
     padding-left: 0;
   }
+}
+
+footer {
+  padding: 1em 0;
+  font-size: .7em;
+  text-align: center;
 }
 
 // for larger screens
