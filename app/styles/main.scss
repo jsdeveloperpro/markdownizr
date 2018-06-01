@@ -8,7 +8,7 @@ $icon-font-path: '../fonts/';
 // Vars
 $main-bg: #1c1e29;
 $main-light: #f5f5f5;
-$main-light-alt: #eee8d5;
+$main-light-alt: #d5d5d5;
 $features-1: lighten(#cb4b16, 10%); // solarized orange
 $features-2: lighten(#dc322f, 10%); // solarized red
 $features-3: lighten(#d33682, 10%); // solarized magenta
@@ -103,16 +103,14 @@ h1, h2, h3, h4 {
   border: 0;
 }
 
-#logo {
-  position: relative;
-  display: inline;
-}
-
 #logo i {
   position: absolute;
 }
 
 #logo {
+  position: relative;
+  display: inline;
+
   @include bounceInDown(
     $duration: 1s,
     $count: 1,
