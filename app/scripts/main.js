@@ -17,16 +17,15 @@ $(document).ready(function() {
 
   // live markdownizing demo
 
-  // set filtering opts
   var mdOpts = {
     // filter out stuff
     converters: [{
       // grab the settings
-      filter: ['div', 'span', 'small', 'aside', 'section', 'article', 'header', 'time', 'address'],
+      filter: ['div', 'span', 'small', 'aside', 'section', 'article', 'header', 'footer', 'hgroup', 'time', 'address', 'button'],
       replacement: function (innerHTML) { return innerHTML }
     }, {
       // don't include these in the final markdown
-      filter: ['script', 'noscript', 'canvas', 'embed', 'object', 'param', 'svg', 'source', 'form', 'nav', 'iframe', 'footer', 'hgroup'],
+      filter: ['script', 'noscript', 'canvas', 'embed', 'object', 'param', 'svg', 'source', 'nav', 'iframe',],
       replacement: function () { return '' }
     }]
   };
