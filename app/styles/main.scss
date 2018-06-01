@@ -9,12 +9,14 @@ $icon-font-path: '../fonts/';
 $main-bg: #1c1e29;
 $main-light: #fdf6e3; // solarized base3
 $main-light-alt: #eee8d5;
-// $features-1: lighten(#b58900, 10%); // solarized yellow
 $features-1: lighten(#cb4b16, 10%); // solarized orange
-$features-2: lighten(#d33682, 10%); // solarized magenta
-$features-3: lighten(#6c71c4, 10%); // solarized violet
-$features-4: lighten(#2aa198, 10%); // solarized cyan
-$features-5: lighten(#859900, 10%); // solarized green
+$features-2: lighten(#dc322f, 10%); // solarized red
+$features-3: lighten(#d33682, 10%); // solarized magenta
+$features-4: lighten(#6c71c4, 10%); // solarized violet
+$features-5: lighten(#268bd2, 10%); // solarized blue
+$features-6: lighten(#2aa198, 10%); // solarized cyan
+$features-7: lighten(#859900, 10%); // solarized green
+$features-8: lighten(#b58900, 10%); // solarized yellow
 
 
 .browsehappy {
@@ -245,40 +247,42 @@ section.main {
     margin-bottom: 3em;
   }
 }
+
 #features .container-fluid.first-feature:first-child {
   border-top-color: $main-bg;
 }
-#features .container-fluid:nth-child(5n+1) {
+#features .container-fluid:nth-child(7n+1) {
   background-color: $features-1;
-  // border-top-color: $features-6;
+  border-top-color: $features-6;
 }
-#features .container-fluid:nth-child(5n+2) {
+#features .container-fluid:nth-child(7n+2) {
   background-color: $features-2;
   border-top-color: $features-1;
 }
-#features .container-fluid:nth-child(5n+3) {
+#features .container-fluid:nth-child(7n+3) {
   background-color: $features-3;
   border-top-color: $features-2;
 }
-#features .container-fluid:nth-child(5n+4) {
+#features .container-fluid:nth-child(7n+4) {
   background-color: $features-4;
   border-top-color: $features-3;
 }
-#features .container-fluid:nth-child(5n+5) {
+#features .container-fluid:nth-child(7n+5) {
   background-color: $features-5;
   border-top-color: $features-4;
 }
-#features .container-fluid:nth-child(5n+6) {
-  border-bottom-color: $main-bg;
+#features .container-fluid:nth-child(7n+6) {
+  background-color: $features-6;
   border-top-color: $features-5;
-  border-bottom-style: dashed;
 }
-#features .container-fluid:nth-child(5n+2):last-child {
-  // border-top-color: $features-6;
+#features .container-fluid:nth-child(7n+7) {
+  background-color: $features-7;
+  border-top-color: $features-6;
+}
+#features .container-fluid.last-feature:last-child {
   border-bottom-style: dashed;
   border-bottom-color: $main-bg;
 }
-
 // secret unicorn
 
 #secret {
@@ -290,7 +294,7 @@ section.main {
   color: red;
   font-size: 5em;
   transform: rotate(-25deg);
-  font-family: 'Orbitron';
+  font-family: 'orbitron';
 }
 
 #credits {
@@ -308,7 +312,6 @@ section.main {
   .container-fluid .row {
     margin-bottom: 10px;
     display: flex;
-    align-items: center;
 
     .col {
       display: flex;
