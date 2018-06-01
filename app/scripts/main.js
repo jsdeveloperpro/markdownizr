@@ -100,10 +100,9 @@ $(document).ready(function() {
 
   // auto icon for external links
   var icon = '<i class="fas fa-external-link-alt"></i>';
-  $('a').filter(function() {
-    return this.hostname && this.hostname !== location.hostname && $.not('nav a');
+  $('a').not('nav a').filter(function() {
+    return this.hostname && this.hostname !== location.hostname;
   }).append(' ' + icon);
-
 
 });
 
