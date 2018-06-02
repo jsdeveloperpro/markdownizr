@@ -56,7 +56,7 @@ $(document).ready(function() {
   }
 
   // nice nav scrolling
-  $('.navbar.navbar-default a').on('click', function(e) {
+  $('a[href^="#"]').on('click', function(e) {
     var link = $(this).attr('href');
     // check if it's a local anchor
     if ( link.length > 1 && link.indexOf('#') === 0 ) {
