@@ -15,6 +15,13 @@ function isSeen(elem) {
 
 $(document).ready(function() {
 
+  // auto close BS mobile nav upon selecting link
+  $(document).on('click', '.navbar-collapse.in', function(e) {
+    if($(e.target).is('a')) {
+      $(this).collapse('hide');
+    }
+  });
+
   // live markdownizing demo
 
   var mdOpts = {
